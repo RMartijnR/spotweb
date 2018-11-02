@@ -4,7 +4,7 @@
  * Define several version constants
  * used throughput Spotweb
  */
-define('SPOTWEB_SETTINGS_VERSION', '0.28');
+define('SPOTWEB_SETTINGS_VERSION', '0.29');
 define('SPOTWEB_SECURITY_VERSION', '0.32');
 define('SPOTDB_SCHEMA_VERSION', '0.68');
 define('SPOTWEB_VERSION', '0.' . (SPOTDB_SCHEMA_VERSION * 100) . '.' . (SPOTWEB_SETTINGS_VERSION * 100) . '.' . (SPOTWEB_SECURITY_VERSION * 100));
@@ -39,8 +39,21 @@ class Bootstrap {
          * Set the cache path
          */
         if ($settings->exists('cache_path')) {
-            $daoFactory->setCachePath($settings->get('cache_path'));
+            $cachePath = $settings->get('cache_path');
+            if (!empty($cachePath)) {
+                if (strpos($cachePath, './') === 0 or strpos($cachePath, '.\\') === 0) {
+                    $cachePath = __DIR__.'/../'.substr($cachePath,2);
+                }
+            } 
+            else {
+                $cachePath = __DIR__.'/../cache';
+            }
+        }
+        else {
+            $cachePath = __DIR__.'/../cache';
         } # if
+
+        $daoFactory->setCachePath($cachePath);
 
 		/*
 		 * Run the validation of the most basic systems
@@ -75,6 +88,8 @@ class Bootstrap {
      * @throws DatabaseConnectionException
      * @return Dao_Base_Factory
      */
+
+
 	public function getDaoFactory() {
         SpotTiming::start(__CLASS__ . '::' . __FUNCTION__);
 

@@ -7,16 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
 {
     public static $files = array (
-        '2017bd12a28d839df32ad9b0b2a97562' => __DIR__ . '/..' . '/gdwebs/nntp/src/Protocol/Responsecode.php',
-        'ed817a92f1a97d5fd2972ea0d5bd357d' => __DIR__ . '/..' . '/gdwebs/nntp/src/Protocol/Client.php',
-        '675a69e7dbe61c444936690a6f90035e' => __DIR__ . '/..' . '/gdwebs/nntp/src/Client.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+        '5caae5f7b68648de3f5342db2c5e073b' => __DIR__ . '/..' . '/spotweb/nntp/src/Protocol/Responsecode.php',
+        'aceb30944f602cb245c3639fc1fadea4' => __DIR__ . '/..' . '/spotweb/nntp/src/Protocol/Client.php',
+        '4a08139a9d6436051e44a1c5271bced8' => __DIR__ . '/..' . '/spotweb/nntp/src/Client.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
             'phpseclib\\' => 10,
+        ),
+        'Z' => 
+        array (
+            'Zend\\Xml2Json\\' => 14,
+            'Zend\\Json\\' => 10,
         ),
         'A' => 
         array (
@@ -29,6 +34,14 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'Zend\\Xml2Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-xml2json/src',
+        ),
+        'Zend\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-json/src',
+        ),
         'Abraham\\TwitterOAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/abraham/twitteroauth/src',
@@ -36,6 +49,13 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
     );
 
     public static $prefixesPsr0 = array (
+        'Z' => 
+        array (
+            'ZendXml\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/zendframework/zendxml/library',
+            ),
+        ),
         'P' => 
         array (
             'Prowl' => 
@@ -53,18 +73,6 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
     );
 
     public static $classMap = array (
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthConsumer' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthDataStore' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthException' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthRequest' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthServer' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthSignatureMethod' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthSignatureMethod_HMAC_SHA1' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthSignatureMethod_PLAINTEXT' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthSignatureMethod_RSA_SHA1' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthToken' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\OAuth\\OAuthUtil' => __DIR__ . '/..' . '/abraham/twitteroauth/src/OAuth.php',
-        'Abraham\\TwitterOAuth\\TwitterOAuth' => __DIR__ . '/..' . '/abraham/twitteroauth/src/TwitterOAuth.php',
         'Bootstrap' => __DIR__ . '/../..' . '/lib/Bootstrap.php',
         'CacheIsCorruptException' => __DIR__ . '/../..' . '/lib/exceptions/CacheIsCorruptException.php',
         'CacheMustBeMigrated2Exception' => __DIR__ . '/../..' . '/lib/exceptions/CacheMustBeMigrated2Exception.php',
@@ -157,7 +165,6 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
         'Dao_UserFilter' => __DIR__ . '/../..' . '/lib/dao/Dao_UserFilter.php',
         'Dao_UserFilterCount' => __DIR__ . '/../..' . '/lib/dao/Dao_UserFilterCount.php',
         'DatabaseConnectionException' => __DIR__ . '/../..' . '/lib/exceptions/DatabaseConnectionException.php',
-        'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
         'Dto_FormResult' => __DIR__ . '/../..' . '/lib/dto/Dto_FormResult.php',
         'Dto_MediaInformation' => __DIR__ . '/../..' . '/lib/dto/Dto_MediaInformation.php',
         'Gettext_PHP' => __DIR__ . '/../..' . '/lib/gettext/Gettext_PHP.php',
@@ -186,12 +193,6 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
         'OwnsettingsCreatedOutputException' => __DIR__ . '/../..' . '/lib/exceptions/OwnsettingsCreatedOutputException.php',
         'ParseSpotXmlException' => __DIR__ . '/../..' . '/lib/exceptions/ParseSpotXmlException.php',
         'PermissionDeniedException' => __DIR__ . '/../..' . '/lib/exceptions/PermissionDeniedException.php',
-        'Prowl\\Connector' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/Connector.php',
-        'Prowl\\Message' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/Message.php',
-        'Prowl\\Response' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/Response.php',
-        'Prowl\\SecureConnector' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/SecureConnector.php',
-        'Prowl\\Security\\PassthroughFilterImpl' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/Security/PassthroughFilterImpl.php',
-        'Prowl\\Security\\Secureable' => __DIR__ . '/..' . '/xenji/prowlphp/src/Prowl/Security/Secureable.php',
         'RetrieverRunningException' => __DIR__ . '/../..' . '/lib/exceptions/RetrieverRunningException.php',
         'SchemaNotUpgradedException' => __DIR__ . '/../..' . '/lib/exceptions/SchemaNotUpgradedException.php',
         'SecurityNotUpgradedException' => __DIR__ . '/../..' . '/lib/exceptions/SecurityNotUpgradedException.php',
@@ -226,8 +227,8 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
         'Services_NzbHandler_Disable' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Disable.php',
         'Services_NzbHandler_Display' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Display.php',
         'Services_NzbHandler_Factory' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Factory.php',
-        'Services_NzbHandler_Nzbget' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Nzbget.php',
         'Services_NzbHandler_NZBVortex' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_NZBVortex.php',
+        'Services_NzbHandler_Nzbget' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Nzbget.php',
         'Services_NzbHandler_Pushsabnzbd' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Pushsabnzbd.php',
         'Services_NzbHandler_Runcommand' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Runcommand.php',
         'Services_NzbHandler_Save' => __DIR__ . '/../..' . '/lib/services/NzbHandler/Services_NzbHandler_Save.php',
@@ -334,46 +335,7 @@ class ComposerStaticInit9a4f7282bbaf2b68b9b71f801741479a
         'dbfts_mysql' => __DIR__ . '/../..' . '/lib/dbeng/dbfts_mysql.php',
         'dbfts_pgsql' => __DIR__ . '/../..' . '/lib/dbeng/dbfts_pgsql.php',
         'dbfts_sqlite' => __DIR__ . '/../..' . '/lib/dbeng/dbfts_sqlite.php',
-        'pBarcode128' => __DIR__ . '/..' . '/jean-damien/pchart/class/pBarcode128.class.php',
-        'pBarcode39' => __DIR__ . '/..' . '/jean-damien/pchart/class/pBarcode39.class.php',
-        'pBubble' => __DIR__ . '/..' . '/jean-damien/pchart/class/pBubble.class.php',
-        'pCache' => __DIR__ . '/..' . '/jean-damien/pchart/class/pCache.class.php',
-        'pData' => __DIR__ . '/..' . '/jean-damien/pchart/class/pData.class.php',
-        'pDraw' => __DIR__ . '/..' . '/jean-damien/pchart/class/pDraw.class.php',
-        'pImage' => __DIR__ . '/..' . '/jean-damien/pchart/class/pImage.class.php',
-        'pIndicator' => __DIR__ . '/..' . '/jean-damien/pchart/class/pIndicator.class.php',
-        'pPie' => __DIR__ . '/..' . '/jean-damien/pchart/class/pPie.class.php',
-        'pRadar' => __DIR__ . '/..' . '/jean-damien/pchart/class/pRadar.class.php',
-        'pScatter' => __DIR__ . '/..' . '/jean-damien/pchart/class/pScatter.class.php',
-        'pSplit' => __DIR__ . '/..' . '/jean-damien/pchart/class/pSplit.class.php',
-        'pSpring' => __DIR__ . '/..' . '/jean-damien/pchart/class/pSpring.class.php',
-        'pStock' => __DIR__ . '/..' . '/jean-damien/pchart/class/pStock.class.php',
-        'pSurface' => __DIR__ . '/..' . '/jean-damien/pchart/class/pSurface.class.php',
         'parse_model' => __DIR__ . '/..' . '/digitalstratum/fts_parser/parse_model.php',
-        'phpseclib\\Crypt\\AES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
-        'phpseclib\\Crypt\\Base' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
-        'phpseclib\\Crypt\\Blowfish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
-        'phpseclib\\Crypt\\DES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/DES.php',
-        'phpseclib\\Crypt\\Hash' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Hash.php',
-        'phpseclib\\Crypt\\RC2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RC2.php',
-        'phpseclib\\Crypt\\RC4' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RC4.php',
-        'phpseclib\\Crypt\\RSA' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RSA.php',
-        'phpseclib\\Crypt\\Random' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Random.php',
-        'phpseclib\\Crypt\\Rijndael' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Rijndael.php',
-        'phpseclib\\Crypt\\TripleDES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
-        'phpseclib\\Crypt\\Twofish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
-        'phpseclib\\File\\ANSI' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
-        'phpseclib\\File\\ASN1' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
-        'phpseclib\\File\\ASN1\\Element' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1/Element.php',
-        'phpseclib\\File\\X509' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/X509.php',
-        'phpseclib\\Math\\BigInteger' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
-        'phpseclib\\Net\\SCP' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SCP.php',
-        'phpseclib\\Net\\SFTP' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SFTP.php',
-        'phpseclib\\Net\\SFTP\\Stream' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SFTP/Stream.php',
-        'phpseclib\\Net\\SSH1' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH1.php',
-        'phpseclib\\Net\\SSH2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH2.php',
-        'phpseclib\\System\\SSH\\Agent' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
-        'phpseclib\\System\\SSH\\Agent\\Identity' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent/Identity.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

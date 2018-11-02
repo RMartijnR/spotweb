@@ -190,7 +190,9 @@ try {
 						  'maxage' => $req->getDef('maxage', ''),
 						  'offset' => $req->getDef('offset', ''),
 						  'del' => $req->getDef('del', ''),
-                          'spotcat' => $req->getDef('spotcat', '')
+                          'spotcat' => $req->getDef('spotcat', ''),
+                          'noalt' => $req->getDef('noalt', ''),
+                          'poster' => $req->getDef('poster', '')
 					)
 			);
 			$page->render();
@@ -361,7 +363,7 @@ try {
 
 		default : {
 				SpotTiming::start('renderpage->case-default');
-				if (@$_SERVER['HTTP_X_PURPOSE'] == 'preview') {
+				if ((empty($_SERVER['HTTP_X_PURPOSE']) ? "" : $_SERVER['HTTP_X_PURPOSE']) == 'preview') {
 					$page = new SpotPage_getimage($daoFactory, $settings, $currentSession,
 							Array('messageid' => $req->getDef('messageid', ''),
 								  'image' => array('type' => 'speeddial')));
@@ -419,15 +421,15 @@ catch(OwnsettingsCreatedOutputException $x) {
 } # OwnsettingsCreatedOutputException
 
 catch(SchemaNotUpgradedException $x) {
-	echo "Database schema has been changed. Please run 'upgrade-db.php' from an console window". PHP_EOL;
+	echo "Database schema has been changed. Please run 'bin/upgrade-db.php' from an console window". PHP_EOL;
 } # SchemaNotUpgradedException
 
 catch(SecurityNotUpgradedException $x) {
-	echo "Spotweb contains updated security settings. Please run 'upgrade-db.php' from a console window". PHP_EOL;
+	echo "Spotweb contains updated security settings. Please run 'bin/upgrade-db.php' from a console window". PHP_EOL;
 } # SecurityNotUpgradedException
 
 catch(SettingsNotUpgradedException $x) {
-	echo "Spotweb contains updated global settings settings. Please run 'upgrade-db.php' from a console window". PHP_EOL;
+	echo "Spotweb contains updated global settings settings. Please run 'bin/upgrade-db.php' from a console window". PHP_EOL;
 } # SecurityNotUpgradedException
 
 catch(DatabaseConnectionException $x) {
